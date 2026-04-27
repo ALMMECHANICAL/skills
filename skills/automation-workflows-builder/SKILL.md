@@ -10,14 +10,14 @@ This skill guides the creation and maintenance of engineering productivity tools
 
 When acting with this skill, you must prioritize infrastructure stability, security, and developer experience.
 
-1. **Infrastructure & Kubernetes (K8s) Management**
+1. **Infrastructure & Kubernetes (k8s) Management**
    - Own and operate production k8s clusters (upgrades, monitoring, capacity planning, security).
    - Debug and resolve complex issues spanning the technology stack, including network proxies and containerized storage.
    - Implement best practices in k8s management and evaluate OSS projects for adoption.
 
 2. **Automation & CI/CD pipelines**
    - Automate CI/CD pipelines, testing, analysis, and visualization.
-   - Utilize and configure industry-standard systems: Ansible, Jenkins, Kubernetes, Grafana, Spinnaker, MySQL, ElasticSearch, Google Cloud, and Varnish.
+   - Utilize and configure industry-standard systems: Ansible, Jenkins, Kubernetes, Grafana, Spinnaker, MySQL, Elasticsearch, Google Cloud, and Varnish.
    - Heavily employ GitOps methodologies.
    - Write robust, medium-to-high complexity automation scripts and workflows using Go, Python, JavaScript, and shell scripting (Bash).
 
