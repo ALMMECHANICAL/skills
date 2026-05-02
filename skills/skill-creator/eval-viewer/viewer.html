@@ -37,6 +37,16 @@
       flex-direction: column;
     }
 
+    /* ---- Layout ---- */
+    .app-layout {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .default-hidden {
+      display: none;
+    }
+
     /* ---- Header ---- */
     .header {
       background: var(--header-bg);
@@ -265,6 +275,7 @@
       display: flex;
       align-items: center;
       cursor: pointer;
+      -webkit-user-select: none;
       user-select: none;
     }
     .grades-toggle:hover {
@@ -541,7 +552,7 @@
   </style>
 </head>
 <body>
-  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+  <div id="app" class="app-layout">
     <div class="header">
       <div>
         <h1>Eval Review: <span id="skill-name"></span></h1>
@@ -551,7 +562,7 @@
     </div>
 
     <!-- View tabs (only shown when benchmark data exists) -->
-    <div class="view-tabs" id="view-tabs" style="display:none;">
+    <div class="view-tabs default-hidden" id="view-tabs">
       <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
       <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
     </div>
@@ -561,7 +572,7 @@
     <div class="main">
       <!-- Prompt -->
       <div class="section">
-        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-header">Prompt <span class="config-badge default-hidden" id="config-badge"></span></div>
         <div class="section-body">
           <div class="prompt-text" id="prompt-text"></div>
         </div>
@@ -576,7 +587,7 @@
       </div>
 
       <!-- Previous Output (collapsible) -->
-      <div class="section" id="prev-outputs-section" style="display:none;">
+      <div class="section default-hidden" id="prev-outputs-section">
         <div class="section-header">
           <div class="grades-toggle" onclick="togglePrevOutputs()">
             <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
@@ -587,7 +598,7 @@
       </div>
 
       <!-- Grades (collapsible) -->
-      <div class="section" id="grades-section" style="display:none;">
+      <div class="section default-hidden" id="grades-section">
         <div class="section-header">
           <div class="grades-toggle" onclick="toggleGrades()">
             <span class="arrow" id="grades-arrow">&#9654;</span>
@@ -607,7 +618,7 @@
             placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
           ></textarea>
           <div class="feedback-status" id="feedback-status"></div>
-          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+          <div class="prev-feedback default-hidden" id="prev-feedback">
             <div class="prev-feedback-label">Previous feedback</div>
             <div id="prev-feedback-text"></div>
           </div>
